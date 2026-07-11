@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chaitanya M — AI Program &amp; Delivery Leader</title>
+<meta name="description" content="AI Project Manager & Scrum Master. PMI-CPMAI certified. 10+ years delivering AI & GenAI programs on Agile, Scrum and hybrid methods, from use-case to production." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0A121B;
+    --ink-2:#0D1826;
+    --panel:#111F2E;
+    --panel-2:#0F1B29;
+    --line:#213345;
+    --line-soft:#1A2A3A;
+    --paper:#EAF1F8;
+    --haze:#93A6BC;
+    --haze-dim:#6C8098;
+    --beacon:#5CC9DE;
+    --beacon-dim:#2E7C8C;
+    --runway:#F4B860;
+    --good:#6FD79A;
+    --maxw:1120px;
+    --r:14px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:"Instrument Sans",system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+      radial-gradient(1200px 700px at 78% -8%, rgba(92,201,222,0.10), transparent 60%),
+      radial-gradient(900px 600px at 8% 105%, rgba(244,184,96,0.05), transparent 60%);
+    pointer-events:none;
+    z-index:0;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:rgba(92,201,222,0.28);}
+  :focus-visible{outline:2px solid var(--beacon);outline-offset:3px;border-radius:4px;}
+
+  .mono{font-family:"Spline Sans Mono",ui-monospace,monospace;}
+  .eyebrow{
+    font-family:"Spline Sans Mono",monospace;
+    font-size:12px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--beacon);
+  }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:20;
+    background:rgba(10,18,27,0.72);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{display:flex;align-items:center;gap:11px;font-family:"Archivo";font-weight:700;letter-spacing:0.01em;}
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--runway);box-shadow:0 0 0 4px rgba(244,184,96,0.14);animation:pulse 2.6s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.45;}}
+  .nav-links{display:flex;gap:30px;align-items:center;}
+  .nav-links a{font-size:14px;color:var(--haze);transition:color .18s;}
+  .nav-links a:hover{color:var(--paper);}
+  .nav-cta{
+    font-family:"Spline Sans Mono",monospace;font-size:13px;letter-spacing:0.04em;
+    border:1px solid var(--line);padding:9px 16px;border-radius:9px;color:var(--paper);
+    transition:border-color .18s, background .18s;
+  }
+  .nav-cta:hover{border-color:var(--beacon);background:rgba(92,201,222,0.08);}
+  .nav-toggle{display:none;}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:88px 0 44px;}
+  .hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:40px;align-items:center;}
+  .hero h1{
+    font-family:"Archivo";font-weight:800;
+    font-size:clamp(34px,5.2vw,60px);
+    line-height:1.04;letter-spacing:-0.02em;margin:18px 0 0;
+  }
+  .hero h1 .glow{color:var(--beacon);}
+  .hero .lede{color:var(--haze);font-size:clamp(16px,1.7vw,19px);margin:22px 0 0;max-width:44ch;}
+  .hero-actions{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:"Spline Sans Mono",monospace;font-size:14px;letter-spacing:0.03em;
+    padding:13px 20px;border-radius:11px;transition:transform .15s, background .18s, border-color .18s;
+  }
+  .btn-primary{background:var(--beacon);color:#062028;font-weight:600;}
+  .btn-primary:hover{transform:translateY(-2px);background:#74d6e8;}
+  .btn-ghost{border:1px solid var(--line);color:var(--paper);}
+  .btn-ghost:hover{border-color:var(--beacon);background:rgba(92,201,222,0.07);transform:translateY(-2px);}
+
+  /* radar */
+  .radar-frame{position:relative;aspect-ratio:1;max-width:360px;margin-left:auto;width:100%;}
+  .radar{position:absolute;inset:0;border-radius:50%;
+    background:radial-gradient(circle at center, rgba(92,201,222,0.07), transparent 70%);
+    border:1px solid var(--line);overflow:hidden;}
+  .radar .ring{position:absolute;border:1px solid var(--line-soft);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);}
+  .radar .ring.r1{width:33%;height:33%;}
+  .radar .ring.r2{width:63%;height:63%;}
+  .radar .ring.r3{width:92%;height:92%;}
+  .radar .cross{position:absolute;background:var(--line-soft);}
+  .radar .cross.h{top:50%;left:4%;right:4%;height:1px;transform:translateY(-50%);}
+  .radar .cross.v{left:50%;top:4%;bottom:4%;width:1px;transform:translateX(-50%);}
+  .radar .sweep{position:absolute;inset:0;border-radius:50%;
+    background:conic-gradient(from 0deg, rgba(92,201,222,0.42), rgba(92,201,222,0.02) 42deg, transparent 60deg);
+    animation:spin 5.5s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .blip{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--runway);box-shadow:0 0 12px var(--runway);}
+  .blip.b1{top:31%;left:62%;animation:blink 5.5s ease-in-out infinite;}
+  .blip.b2{top:64%;left:40%;animation:blink 5.5s ease-in-out .9s infinite;}
+  .blip.b3{top:47%;left:73%;background:var(--beacon);box-shadow:0 0 12px var(--beacon);animation:blink 5.5s ease-in-out 2.1s infinite;}
+  @keyframes blink{0%,18%,100%{opacity:0.25;}9%{opacity:1;}}
+  .radar-label{position:absolute;bottom:-2px;left:0;font-family:"Spline Sans Mono",monospace;font-size:11px;color:var(--haze-dim);letter-spacing:0.14em;}
+
+  /* ---------- DEPARTURE BOARD ---------- */
+  .board{
+    margin-top:52px;border:1px solid var(--line);border-radius:var(--r);
+    background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    display:grid;grid-template-columns:repeat(4,1fr);overflow:hidden;
+  }
+  .board .cell{padding:26px 24px;border-right:1px solid var(--line-soft);}
+  .board .cell:last-child{border-right:none;}
+  .board .num{font-family:"Spline Sans Mono",monospace;font-weight:600;font-size:clamp(26px,3vw,36px);color:var(--paper);letter-spacing:0.01em;}
+  .board .num .u{color:var(--beacon);}
+  .board .lbl{font-size:13px;color:var(--haze);margin-top:6px;}
+  .flip{display:inline-block;animation:flip .6s cubic-bezier(.2,.7,.2,1) both;}
+  .board .cell:nth-child(2) .flip{animation-delay:.08s;}
+  .board .cell:nth-child(3) .flip{animation-delay:.16s;}
+  .board .cell:nth-child(4) .flip{animation-delay:.24s;}
+  @keyframes flip{from{opacity:0;transform:translateY(-40%) rotateX(-70deg);filter:blur(3px);}to{opacity:1;transform:none;filter:none;}}
+
+  /* ---------- SECTIONS ---------- */
+  section.block{padding:78px 0 8px;}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:40px;}
+  .sec-head h2{font-family:"Archivo";font-weight:700;font-size:clamp(24px,3vw,32px);letter-spacing:-0.01em;margin:0;}
+  .sec-head .idx{font-family:"Spline Sans Mono",monospace;color:var(--beacon-dim);font-size:13px;}
+
+  /* ---------- CASE STUDIES ---------- */
+  .case{
+    border:1px solid var(--line);border-radius:var(--r);
+    background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    padding:30px 32px;margin-bottom:22px;
+    transition:border-color .2s, transform .2s;
+  }
+  .case:hover{border-color:var(--beacon-dim);transform:translateY(-2px);}
+  .case-top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:4px;}
+  .tag{font-family:"Spline Sans Mono",monospace;font-size:11.5px;letter-spacing:0.16em;color:var(--ink);background:var(--beacon);padding:5px 10px;border-radius:6px;font-weight:600;}
+  .tag.amber{background:var(--runway);}
+  .tag.line{background:transparent;color:var(--haze);border:1px solid var(--line);}
+  .case h3{font-family:"Archivo";font-weight:700;font-size:22px;margin:12px 0 2px;letter-spacing:-0.01em;}
+  .case .role{color:var(--haze);font-size:14px;margin-bottom:16px;}
+  .case .body p{margin:0 0 13px;color:#CDD8E4;}
+  .case .body p strong{color:var(--paper);font-weight:600;}
+  .case .body .k{font-family:"Spline Sans Mono",monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--beacon);display:block;margin-bottom:3px;}
+  .metrics{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;padding-top:18px;border-top:1px solid var(--line-soft);}
+  .chip{font-family:"Spline Sans Mono",monospace;font-size:13px;color:var(--paper);background:var(--ink-2);border:1px solid var(--line);padding:8px 13px;border-radius:8px;}
+  .chip .v{color:var(--good);font-weight:600;}
+
+  /* ---------- CAPABILITIES ---------- */
+  .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .cap{border:1px solid var(--line);border-radius:var(--r);background:var(--panel-2);padding:24px;}
+  .cap h4{font-family:"Archivo";font-weight:600;font-size:16px;margin:0 0 14px;display:flex;align-items:center;gap:9px;}
+  .cap h4::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--beacon);}
+  .cap ul{margin:0;padding:0;list-style:none;}
+  .cap li{font-size:14.5px;color:var(--haze);padding:5px 0;border-bottom:1px solid var(--line-soft);}
+  .cap li:last-child{border-bottom:none;}
+
+  /* ---------- SIGNALS ---------- */
+  .signals{display:grid;grid-template-columns:1.2fr 1fr;gap:22px;}
+  .panel{border:1px solid var(--line);border-radius:var(--r);background:var(--panel-2);padding:28px;}
+  .panel h4{font-family:"Archivo";font-weight:700;font-size:18px;margin:0 0 18px;}
+  .cert{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line-soft);}
+  .cert:last-child{border-bottom:none;}
+  .cert .badge{flex:none;width:44px;height:44px;border-radius:10px;border:1px solid var(--line);display:grid;place-items:center;font-family:"Spline Sans Mono",monospace;font-size:12px;font-weight:600;color:var(--beacon);background:var(--ink-2);}
+  .cert .t{font-weight:600;font-size:15px;}
+  .cert .d{color:var(--haze);font-size:13.5px;}
+  .mentor p{color:#CDD8E4;margin:0 0 12px;font-size:15px;}
+  .mentor .who{color:var(--haze);font-size:13.5px;}
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    border:1px solid var(--line);border-radius:var(--r);
+    background:linear-gradient(135deg, rgba(92,201,222,0.10), transparent 55%), var(--panel);
+    padding:44px;text-align:center;margin-top:10px;
+  }
+  .contact h2{font-family:"Archivo";font-weight:800;font-size:clamp(26px,3.4vw,38px);margin:0 0 12px;letter-spacing:-0.02em;}
+  .contact p{color:var(--haze);max-width:52ch;margin:0 auto 26px;}
+  .contact-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+  footer{border-top:1px solid var(--line-soft);margin-top:78px;padding:30px 0 46px;}
+  .foot-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--haze-dim);font-size:13px;font-family:"Spline Sans Mono",monospace;letter-spacing:0.04em;}
+
+  /* ---------- HOW I WORK ---------- */
+  .flow{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .flow .step{border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,var(--panel),var(--panel-2));padding:26px 24px;}
+  .flow .s-lab{font-family:"Spline Sans Mono",monospace;font-size:11.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--beacon);}
+  .flow .step h4{font-family:"Archivo";font-weight:700;font-size:19px;margin:11px 0 10px;letter-spacing:-0.01em;}
+  .flow .step > p{color:#CDD8E4;margin:0 0 14px;font-size:15px;}
+  .flow .step ul{margin:0;padding:0;list-style:none;}
+  .flow .step li{position:relative;padding:11px 0 11px 20px;font-size:14.5px;color:var(--haze);border-top:1px solid var(--line-soft);}
+  .flow .step li:first-child{border-top:none;}
+  .flow .step li::before{content:"";position:absolute;left:0;top:19px;width:8px;height:1px;background:var(--beacon);}
+  .flow .step li strong{color:var(--paper);font-weight:600;}
+
+  /* ---------- METHOD / CERT ---------- */
+  .cert.feature{align-items:flex-start;border-bottom:none;padding-bottom:4px;}
+  .badge.lg{width:60px;height:60px;font-size:14px;border-color:var(--beacon-dim);color:var(--beacon);background:rgba(92,201,222,0.08);}
+  .methods{margin-top:18px;padding-top:18px;border-top:1px solid var(--line-soft);}
+  .m-lab{font-family:"Spline Sans Mono",monospace;font-size:11.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--haze-dim);display:block;margin-bottom:13px;}
+  .m-tags{display:flex;flex-wrap:wrap;gap:9px;}
+  .mtag{font-family:"Spline Sans Mono",monospace;font-size:13px;color:var(--paper);background:var(--ink-2);border:1px solid var(--line);padding:7px 13px;border-radius:8px;}
+  .mtag:nth-child(-n+3){border-color:var(--beacon-dim);color:var(--beacon);background:rgba(92,201,222,0.07);}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:860px){
+    .hero-grid{grid-template-columns:1fr;}
+    .radar-frame{max-width:260px;margin:8px auto 0;}
+    .board{grid-template-columns:repeat(2,1fr);}
+    .board .cell:nth-child(2){border-right:none;}
+    .board .cell:nth-child(1),.board .cell:nth-child(2){border-bottom:1px solid var(--line-soft);}
+    .caps{grid-template-columns:1fr;}
+    .flow{grid-template-columns:1fr;}
+    .signals{grid-template-columns:1fr;}
+    .nav-links{display:none;}
+  }
+  @media(max-width:560px){
+    .wrap{padding:0 18px;}
+    .board{grid-template-columns:1fr;}
+    .board .cell{border-right:none;border-bottom:1px solid var(--line-soft);}
+    .board .cell:last-child{border-bottom:none;}
+    .case{padding:24px 20px;}
+    .contact{padding:32px 22px;}
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;scroll-behavior:auto!important;transition:none!important;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top"><span class="dot"></span>CHAITANYA&nbsp;M</a>
+    <nav class="nav-links">
+      <a href="#work">Selected work</a>
+      <a href="#how">How I work</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#signals">Method</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">AI Program &amp; Delivery Leadership</span>
+        <h1>From use-case to production — I run the full lifecycle of enterprise <span class="glow">AI programs</span>, and ship them on time.</h1>
+        <p class="lede">PMI-CPMAI&ndash;certified program leader with 10+ years directing AI and GenAI delivery on Agile, Scrum and hybrid methods &mdash; across product, data science, engineering and vendor teams.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">View selected work →</a>
+          <a class="btn btn-ghost" href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="radar-frame" aria-hidden="true">
+        <div class="radar">
+          <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+          <span class="cross h"></span><span class="cross v"></span>
+          <span class="sweep"></span>
+          <span class="blip b1"></span><span class="blip b2"></span><span class="blip b3"></span>
+        </div>
+        <span class="radar-label">WATCH TOWER · LIVE</span>
+      </div>
+    </div>
+
+    <!-- DEPARTURE BOARD -->
+    <div class="wrap">
+      <div class="board" role="list" aria-label="Career highlights">
+        <div class="cell" role="listitem"><div class="num"><span class="flip">10<span class="u">+</span></span></div><div class="lbl">Years leading delivery</div></div>
+        <div class="cell" role="listitem"><div class="num"><span class="flip"><span class="u">$</span>600K<span class="u">+</span></span></div><div class="lbl">Program budget owned</div></div>
+        <div class="cell" role="listitem"><div class="num"><span class="flip">150<span class="u">+</span></span></div><div class="lbl">Global org directed</div></div>
+        <div class="cell" role="listitem"><div class="num"><span class="flip">90<span class="u">%</span></span></div><div class="lbl">On-time completion</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section class="block" id="work">
+    <div class="wrap">
+      <div class="sec-head"><span class="idx">01</span><h2>Selected work</h2></div>
+
+      <!-- Case 1 -->
+      <article class="case">
+        <div class="case-top">
+          <span class="tag">AGENTIC AI</span>
+          <span class="tag line">Rehlat · Flights</span>
+        </div>
+        <h3>Flights Watch Tower — real-time fare-anomaly agent</h3>
+        <div class="role">Program lead · Scrum delivery with AI engineers &amp; external fare suppliers</div>
+        <div class="body">
+          <p><span class="k">Problem</span>In online flight retail, fares move constantly across dozens of suppliers. Stale fares, sudden drops and sold-out inventory reach the customer as failed bookings, margin leakage and lost trust. Manual monitoring can't keep pace with real-time movement across every route and supplier.</p>
+          <p><span class="k">Approach &amp; decisions</span>I scoped it as an <strong>agentic monitoring system</strong> — a "watch tower" that continuously observes fare feeds and <em>acts</em> (auto-blocks anomalous fares) rather than just alerting a human too late. The core judgment call was the guardrail: block aggressively enough to protect the customer, but hold fare jumps below a 1% tolerance so the agent doesn't over-block valid fares and starve inventory. I chose bounded auto-blocking over human-in-the-loop-per-fare because latency mattered at scale, and validated against real supplier edge cases sprint by sprint.</p>
+          <p><span class="k">Outcome</span>Eliminated stale fares, uncontrolled fare drops and sold-outs from reaching customers, with fare jumps held under the 1% threshold.</p>
+        </div>
+        <div class="metrics">
+          <span class="chip">Fare jumps <span class="v">&lt;1%</span></span>
+          <span class="chip">Stale fares <span class="v">eliminated</span></span>
+          <span class="chip">Delivery <span class="v">Scrum sprints</span></span>
+        </div>
+      </article>
+
+      <!-- Case 2 -->
+      <article class="case">
+        <div class="case-top">
+          <span class="tag amber">MACHINE LEARNING</span>
+          <span class="tag line">Rehlat · Pricing</span>
+        </div>
+        <h3>Markup optimization — pricing ancillary fees with ML</h3>
+        <div class="role">Product/program lead · model selection with data science</div>
+        <div class="body">
+          <p><span class="k">Problem</span>Markup on check-in ancillary and convenience fees was set by flat, heuristic rules. Many airline-route-trip-type combinations came out unprofitable — below a $10 net-profit floor — while others were priced past what customers would pay.</p>
+          <p><span class="k">Approach &amp; decisions</span>I defined the <strong>business metric first</strong> — the share of combinations clearing $10 net profit — so the model was optimized against money, not just error rate. We benchmarked Linear Regression (an interpretable baseline) against Random Forest and CatBoost regressors. My call as the product owner was to choose on business-metric lift <em>and</em> operational fit — inference cost and explainability to commercial stakeholders — rather than the lowest RMSE alone.</p>
+          <p><span class="k">Outcome</span>The share of profitable airline-route-trip-type combinations rose from 60% to 85%.</p>
+        </div>
+        <div class="metrics">
+          <span class="chip">Profitable mix <span class="v">60% → 85%</span></span>
+          <span class="chip">Benchmarked <span class="v">LinReg · RF · CatBoost</span></span>
+        </div>
+      </article>
+
+      <!-- Case 3 -->
+      <article class="case">
+        <div class="case-top">
+          <span class="tag">GENAI · EVALS</span>
+          <span class="tag line">Rehlat · Support</span>
+        </div>
+        <h3>AI support chatbot — quality gated by evaluation</h3>
+        <div class="role">End-to-end owner · design → build → UAT → monitoring</div>
+        <div class="body">
+          <p><span class="k">Problem</span>Routine travel queries — booking status, changes, policies — needed deflection at volume. But on a fare rule or a change fee, a <em>wrong</em> answer is worse than no answer, so quality couldn't be judged on vibes.</p>
+          <p><span class="k">Approach &amp; decisions</span>I treated quality as an <strong>evaluation problem</strong>. We built an eval framework with explicit edge-case categories — ambiguous intents, policy corner cases, multi-turn context — and an accuracy rubric, then used it as the release gate through UAT and as a live monitoring signal afterward. Defining "accuracy" concretely and making it the gate meant the bot only expanded once it cleared the bar.</p>
+          <p><span class="k">Outcome</span>Reached 95% accuracy through edge-case validation and evaluation frameworks.</p>
+        </div>
+        <div class="metrics">
+          <span class="chip">Accuracy <span class="v">95%</span></span>
+          <span class="chip">Release gate <span class="v">eval framework</span></span>
+        </div>
+      </article>
+
+      <!-- Case 4 -->
+      <article class="case">
+        <div class="case-top">
+          <span class="tag amber">MT · HUMAN-IN-THE-LOOP</span>
+          <span class="tag line">Rehlat · Localisation</span>
+        </div>
+        <h3>Localisation pipeline — five markets, fast and accurate</h3>
+        <div class="role">Launch owner · pipeline &amp; QA design</div>
+        <div class="body">
+          <p><span class="k">Problem</span>Launching five market domains (FR, ES, CA, DE, MX) meant localising large volumes of customer-facing travel content fast — but raw machine translation risks quality, brand and legal errors that damage trust in a new market.</p>
+          <p><span class="k">Approach &amp; decisions</span>I designed a <strong>machine-translation-plus-human-in-the-loop</strong> pipeline: MT for speed and coverage, a human QA gate for accuracy and brand/legal safety. The trade-off was explicit — pure human translation is accurate but slow and costly; pure MT is fast but risky. HITL captured most of the speed while holding a 99% accuracy bar across all five markets.</p>
+          <p><span class="k">Outcome</span>Cut localisation turnaround by 50% at 99% accuracy.</p>
+        </div>
+        <div class="metrics">
+          <span class="chip">Turnaround <span class="v">−50%</span></span>
+          <span class="chip">Accuracy <span class="v">99%</span></span>
+          <span class="chip">Markets <span class="v">FR · ES · CA · DE · MX</span></span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- HOW I WORK -->
+  <section class="block" id="how">
+    <div class="wrap">
+      <div class="sec-head"><span class="idx">02</span><h2>How I work</h2></div>
+      <div class="flow">
+
+        <div class="step">
+          <span class="s-lab">Requirements</span>
+          <h4>Writing the PRD</h4>
+          <p>Every program starts with a spec a data scientist, an engineer and a commercial sponsor can all act on &mdash; not a wish-list.</p>
+          <ul>
+            <li>Prioritise use-cases on value, feasibility and <strong>data-readiness</strong> before any build &mdash; the CPMAI discipline of proving the data can actually support the model.</li>
+            <li>Define the <strong>success metric in the PRD up front</strong>, as a business metric (net profit cleared, accuracy at the release gate) &mdash; not an offline score.</li>
+            <li>Cut scope to an MVP with explicit <strong>acceptance criteria</strong>, so UAT has something objective to sign off against.</li>
+          </ul>
+        </div>
+
+        <div class="step">
+          <span class="s-lab">Delivery</span>
+          <h4>Sprint planning &amp; cadence</h4>
+          <p>I've run 20+ concurrent Agile initiatives on a single cadence and delivered 90% of them on time.</p>
+          <ul>
+            <li>Backlog grooming &rarr; sprint planning &rarr; daily standups &rarr; retrospectives &rarr; release planning, tracking <strong>velocity and burndown in Jira</strong>.</li>
+            <li><strong>Hybrid by design:</strong> Agile/Scrum for uncertain model &amp; experimentation work; stage-gated planning for integration, compliance and go-live where the dates are fixed.</li>
+            <li>Run dependencies and risk from a live <strong>RAID log</strong>, resolving conflicts before they reach the critical path.</li>
+          </ul>
+        </div>
+
+        <div class="step">
+          <span class="s-lab">Judgment</span>
+          <h4>Making the call</h4>
+          <p>The hard part of AI delivery isn't the model &mdash; it's the judgment around it.</p>
+          <ul>
+            <li><strong>Anchor on the business metric:</strong> I chose the markup model on profit lift and explainability, not the lowest error rate.</li>
+            <li><strong>Set the autonomy boundary deliberately:</strong> bounded auto-blocking for fares where latency rules; human-in-the-loop QA where a brand or legal error costs more.</li>
+            <li><strong>Own the escalation:</strong> single point of accountability to C-level sponsors, framing the trade-offs so a decision can actually be made.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section class="block" id="capabilities">
+    <div class="wrap">
+      <div class="sec-head"><span class="idx">03</span><h2>Capabilities</h2></div>
+      <div class="caps">
+        <div class="cap">
+          <h4>AI &amp; GenAI</h4>
+          <ul>
+            <li>LLMs, RAG &amp; prompt-based workflows</li>
+            <li>Agentic systems (MCP, A2A), evals</li>
+            <li>Deep learning — Transformers, CV, NLP</li>
+            <li>LLMOps, MLOps, guardrails, HITL</li>
+            <li>Responsible AI &amp; model-risk governance</li>
+          </ul>
+        </div>
+        <div class="cap">
+          <h4>Delivery &amp; Program</h4>
+          <ul>
+            <li>End-to-end AI product lifecycle</li>
+            <li>Agile, Scrum, Kanban, SAFe, hybrid</li>
+            <li>PMI-CPMAI for AI project management</li>
+            <li>Budget, vendor &amp; dependency management</li>
+            <li>Use-case prioritisation, MVP, UAT, A/B</li>
+          </ul>
+        </div>
+        <div class="cap">
+          <h4>Cloud, Data &amp; Tools</h4>
+          <ul>
+            <li>Azure AI Foundry / OpenAI, AWS Bedrock, GCP Vertex</li>
+            <li>Snowflake, Databricks, vector DBs, ETL/ELT</li>
+            <li>Python, Power BI, Git, CI/CD</li>
+            <li>Jira, Confluence, Azure DevOps, Asana</li>
+            <li>Smartsheet, MS Project, RAID logs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNALS -->
+  <section class="block" id="signals">
+    <div class="wrap">
+      <div class="sec-head"><span class="idx">04</span><h2>Method &amp; certification</h2></div>
+      <div class="signals">
+        <div class="panel">
+          <h4>Certified in AI project delivery</h4>
+          <div class="cert feature">
+            <span class="badge lg">CPMAI</span>
+            <div>
+              <div class="t">PMI-CPMAI™</div>
+              <div class="d">PMI's specialised certification for managing AI &amp; data projects &mdash; the methodology I use to run feasibility, data-readiness and phased AI delivery.</div>
+            </div>
+          </div>
+          <div class="methods">
+            <span class="m-lab">Methodologies I run</span>
+            <div class="m-tags">
+              <span class="mtag">Agile</span>
+              <span class="mtag">Scrum</span>
+              <span class="mtag">Hybrid</span>
+              <span class="mtag">Kanban</span>
+              <span class="mtag">SAFe</span>
+              <span class="mtag">Waterfall</span>
+            </div>
+          </div>
+        </div>
+        <div class="panel mentor">
+          <h4>Leadership &amp; community</h4>
+          <p><strong style="color:var(--paper)">Mentor — PMI Hyderabad Pearl City Chapter.</strong> Guiding 7+ candidates through CPMAI certification prep via the chapter's Prep Buddy initiative, while advocating for practical AI adoption in the community.</p>
+          <p class="who">Member — Lifemudra Health Awareness Society, supporting community outreach on heart-disease and preventive-health awareness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="block" id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <span class="eyebrow">Open to AI Product / Program roles</span>
+        <h2>Let's talk about your AI roadmap.</h2>
+        <p>If you're building an AI program and need someone accountable from use-case to production — and to the P&amp;L — I'd be glad to connect.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:postchaitanya@gmail.com">postchaitanya@gmail.com</a>
+          <a class="btn btn-ghost" href="https://linkedin.com/in/chaitanya-aipm/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>CHAITANYA M · AI PROGRAM &amp; DELIVERY</span>
+    <span>PMI-CPMAI · AGILE · SCRUM · HYBRID</span>
+  </div>
+</footer>
+
+</body>
+</html>
